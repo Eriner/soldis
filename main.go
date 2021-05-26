@@ -9,14 +9,19 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("testdata/GameStop.bin")
+	contractBin, err := ioutil.ReadFile("testdata/GameStop.bin")
 	if err != nil {
 		log.Fatalln(err)
 	}
-	out, err := asm.Disassemble(dat)
+	out, err := asm.Disassemble(contractBin)
 	if err != nil {
+		// Currently, the Disassemble function from go-ethereum chokes on
+		// some opcodes in the GME contract bytecode. Not sure if this should
+		// be expected or not, as the etherscan disassembler also chokes on some
+		// opcodes. /shrug
+		// Error:
+		// 2021/05/26 12:12:49 incomplete push instruction at 11013
 		log.Fatalln(err)
 	}
 	spew.Dump(out)
-	// log.Fatalln(asm.PrintDisassembled(out[0]))
 }
