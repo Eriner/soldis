@@ -4,4 +4,4 @@ Soldis is toy disassembler for (ABI-compiled) Solidity contracts on the Ethereum
 
 The disassembler is written in Go.
 
-Power to the play... er, I mean, power to the engineer.
+Power to the engineer.
