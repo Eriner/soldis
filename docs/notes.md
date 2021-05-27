@@ -18,3 +18,6 @@ ToB's manticore: https://github.com/trailofbits/manticore
 ## CTF-like challenges
 
 ToB's manticore challeges: https://github.com/trailofbits/manticore-examples
+
+Openzeppelin's ethernaut wargame: https://ethernaut.openzeppelin.com/
+
